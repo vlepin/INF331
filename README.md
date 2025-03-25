@@ -33,6 +33,7 @@ Importante:
 
 Preguntas de la tarea En foro de la semana
 - Hasta miércoles 26 de marzo a las 23:59hrs
+  
 Fecha de entrega
 - miércoles 2 de abril de 2025, 23:59
   
@@ -42,8 +43,11 @@ Fecha de entrega
 
 - Analizar y diseñar requerimiento en conjunto
 - Cada equipo organizará y diseñará su proyecto, de acuerdo sus propios criterios
+  
 Ejemplo: 
+
 Cada estudiante podría construir un módulo de la aplicación, etc...
+
 - La organización y diseño que escojan tendrá impacto sobre su proceso de desarrollo de software, la administración del código, entre otros. Poner atención en este punto, ¿por qué? porque esto tiene impacto por ejemplo en las revisiones de código
 
 - Deberá crear un espacio de trabajo propio en Slack.
@@ -58,7 +62,7 @@ Flujo de administración del código fuente (enlaces GIT)
 - Protección de ramas
 - Revisores/aprobadores 
 - Etc
-- 
+  
 3.2) Codificación
 
 - Programación en Java o Python
