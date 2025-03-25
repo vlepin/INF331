@@ -1,11 +1,28 @@
-import base64
 import os
+import base64
+import logging
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
 from cryptography.fernet import Fernet
+import sentry_sdk
+import functions  # Importamos correctamente el módulo functions
 
-def generate_key(password: str, salt: bytes = b'salt_'):
+sentry_sdk.init(
+    dsn="https://9ab31e2e0d0c98fe8f441409d641da50@o4509040092446720.ingest.us.sentry.io/4509040094871552",
+    send_default_pii=True,
+    traces_sample_rate=1.0
+)
+
+# Configuración de logs
+logging.basicConfig(filename='app.log', level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
+USERNAME = "admin"
+PASSWORD = "admin"
+SALT = b'salt_'
+
+def generate_key(password: str, salt: bytes = SALT):
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
         length=32,
@@ -16,42 +33,67 @@ def generate_key(password: str, salt: bytes = b'salt_'):
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
 
 def register_user(username: str, password: str):
-    key = generate_key(password)
-    f = Fernet(key)
-    encrypted_password = f.encrypt(password.encode()).decode()
-    with open("usuarios.txt", "a") as file:
-        file.write(f"{username}:{encrypted_password}\n")
-    print("Usuario registrado con éxito.")
+    try:
+        key = generate_key(password)
+        f = Fernet(key)
+        encrypted_password = f.encrypt(password.encode()).decode()
 
-def authenticate_user(username: str, password: str) -> bool:
-    if not os.path.exists("usuarios.txt"):
-        print("No hay usuarios registrados.")
+        with open("usuarios.txt", "a") as file:
+            file.write(f"{username}:{encrypted_password}\n")
+
+        logging.info("Usuario %s registrado con éxito.", username)
+        print("Usuario registrado con éxito.")
+
+    except Exception as e:
+        logging.error("Error al registrar usuario: %s", str(e))
+        sentry_sdk.capture_exception(e)
+
+def authenticate(user, password):
+    try:
+        if not os.path.exists("usuarios.txt"):
+            print("No hay usuarios registrados.")
+            return False
+
+        with open("usuarios.txt", "r") as file:
+            users = file.readlines()
+
+        for u in users:
+            saved_user, saved_enc_pass = u.strip().split(":")
+
+            key = generate_key(password)
+            f = Fernet(key)
+            
+            try:
+                decrypted_password = f.decrypt(saved_enc_pass.encode()).decode()
+            except Exception:
+                continue  # Si la clave no coincide, seguir buscando
+
+            if saved_user == user and decrypted_password == password:
+                logging.info("Inicio de sesión exitoso para usuario: %s", user)
+                return True
+
+        logging.warning("Intento de inicio de sesión fallido para usuario: %s", user)
+        print("Credenciales incorrectas.")
         return False
-    with open("usuarios.txt", "r") as file:
-        for line in file:
-            stored_user, stored_password = line.strip().split(":")
-            if stored_user == username:
-                key = generate_key(password)
-                f = Fernet(key)
-                try:
-                    if f.decrypt(stored_password.encode()).decode() == password:
-                        return True
-                except:
-                    return False
-    return False
+
+    except Exception as e:
+        logging.error("Error en autenticación: %s", str(e))
+        sentry_sdk.capture_exception(e)
+        return False
 
 if __name__ == "__main__":
     choice = input("¿Desea registrarse (R) o iniciar sesión (L)? ").strip().lower()
+
     if choice == "r":
         user = input("Ingrese un nombre de usuario: ")
         pwd = input("Ingrese una contraseña: ")
         register_user(user, pwd)
+
     elif choice == "l":
         user = input("Usuario: ")
         pwd = input("Contraseña: ")
-        if authenticate_user(user, pwd):
-            print("Inicio de sesión exitoso.")
-            from functions import menu_principal
-            menu_principal()
+        
+        if authenticate(user, pwd):
+            functions.menu_principal()  # Llamamos a la función correctamente importada
         else:
-            print("Credenciales incorrectas.")
+            print("Acceso denegado.")
