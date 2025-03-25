@@ -1,4 +1,4 @@
-# MyPass
+# Shop
 
 ## Descripción
 
@@ -16,7 +16,9 @@ Estos se instalan automáticamente al ejecutar el programa.
 
 Para su correcta ejecución...
 
+## Logs
 
+Se detallan en...
 
 ## Licencia
 
