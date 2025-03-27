@@ -19,5 +19,12 @@
         "cantidad": 4,
         "precio": 18000,
         "categoria": "Ropa"
+    },
+    {
+        "nombre": "Pepsi",
+        "descripcion": "Bebida gasificada - 2L",
+        "cantidad": 13,
+        "precio": 1700,
+        "categoria": "Bebidas"
     }
 ]
