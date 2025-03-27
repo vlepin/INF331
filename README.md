@@ -23,11 +23,47 @@ Para ejecutar el programa, simplemente abre una terminal o consola y escribe:
 
 > python shop.py >
 
-El programa comenzará solicitando registrarse o identificarse, posteriormente se abre un menú con diferentes opciones, como agregar productos, procesar ventas y visualizar estadísticas.
+El programa comenzará solicitando registrarse o identificarse, si no desea registrarse puede ingresar las credenciales disponibles a continuación:
 
-## Logs
+>Admin #Usuario>
 
-El programa genera un archivo de registros ´app.log´ donde se detallan todas las operaciones realizadas, incluyendo ventas, errores y cambios en el inventario. Este archivo se actualiza automáticamente en cada ejecución.
+>123 #Contraseña>
+
+Posteriormente se abre un menú con diferentes opciones para gestionar la tienda. Cuyas funcionalidades y uso se describen a continuación:
+
+- **1. Agregar producto**
+
+Agrega un producto al inventario, para ello se deben rellenar los campos: `Nombre`, `Descripción`, `Unidades disponibles`, `Precio unitario` y `Categoría`.
+
+- **2. Consultar lista de productos**
+
+Entrega la lista de los productos ingresados (incluso si no tienen stock), y se muestran en el orden en que fueron ingresados con su respectivo índice.
+
+- **3. Buscar y filtrar productos**
+
+Si se desea omitir alguna de las opciones oprimir `Enter`.
+
+Primero pide el nombre del producto para buscar. Y después comienza la opción de filtrado de productos por `Categoría` y un rango de precios.
+
+- **4. Gestionar stock**
+
+Se selecciona el número de índice del producto cuyo stock se desea modificar, después se ingresa la cantidad actualizada del producto y se actualiza en el inventario.
+
+- **5. Eliminar producto**
+
+Elimina un producto del inventario, se ingresa su índice y se actualiza el inventario.
+
+- **6. Generar reporte de inventario**
+
+Modifica el archivo `reporte_inventario.txt` ingresando un resumen con el total de productos en inventario, el valor total del inventario y los productos agotados.
+
+- **7. Salir**
+
+Cierra la sesión.
+
+## Cómo contribuir
+
+La manera recomendada de realizar contribuciones a este proyecto es a traves del flujo de trabajo ["fork and pull request"](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 
 ## Licencia
 
