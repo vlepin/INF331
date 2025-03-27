@@ -1,0 +1,23 @@
+[
+    {
+        "nombre": "Pepsi",
+        "descripcion": "Bebida Gasificada - 3L",
+        "cantidad": 12,
+        "precio": 2000,
+        "categoria": "Bebidas"
+    },
+    {
+        "nombre": "Polera rosa",
+        "descripcion": "Polera Americanino - Talla S",
+        "cantidad": 5,
+        "precio": 15000,
+        "categoria": "Ropa"
+    },
+    {
+        "nombre": "Pantalon Mom Jeans",
+        "descripcion": "Pantalon Sybilla - Talla S",
+        "cantidad": 4,
+        "precio": 18000,
+        "categoria": "Ropa"
+    }
+]
