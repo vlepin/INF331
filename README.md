@@ -2,10 +2,12 @@
 
 Repositorio de Tareas del ramo Pruebas de Software
 
-Integrantes:
+# Integrantes:
 
 - Tamara León
 
 - Valentina Lepin
 
-Tareas:
+# Tareas
+
+- [Tarea 1](https://github.com/vlepin/INF331/tree/Tarea_1)
