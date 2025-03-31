@@ -22,6 +22,7 @@ USERNAME = "admin"
 PASSWORD = "admin"
 SALT = b'salt_'
 
+# Protección de contraseña
 def generate_key(password: str, salt: bytes = SALT):
     kdf = PBKDF2HMAC(
         algorithm=hashes.SHA256(),
@@ -32,6 +33,7 @@ def generate_key(password: str, salt: bytes = SALT):
     )
     return base64.urlsafe_b64encode(kdf.derive(password.encode()))
 
+# Registro de usuarios
 def register_user(username: str, password: str):
     try:
         key = generate_key(password)
@@ -48,6 +50,7 @@ def register_user(username: str, password: str):
         logging.error("Error al registrar usuario: %s", str(e))
         sentry_sdk.capture_exception(e)
 
+# Autenticación de usuarios
 def authenticate(user, password):
     try:
         if not os.path.exists("usuarios.txt"):
@@ -81,19 +84,27 @@ def authenticate(user, password):
         sentry_sdk.capture_exception(e)
         return False
 
+# Función principal
 if __name__ == "__main__":
-    choice = input("¿Desea registrarse (R) o iniciar sesión (L)? ").strip().lower()
+    print("\nBienvenido")
+    print("¿Qué operación desea realizar?")
+    print("1. Registrarse")
+    print("2. Iniciar sesión")
+        
+    choice = input("Seleccione una opción: ")
 
-    if choice == "r":
+    if int(choice) == 1:
         user = input("Ingrese un nombre de usuario: ")
         pwd = input("Ingrese una contraseña: ")
         register_user(user, pwd)
 
-    elif choice == "l":
+    elif int(choice) == 2:
         user = input("Usuario: ")
         pwd = input("Contraseña: ")
         
         if authenticate(user, pwd):
-            functions.menu_principal()  # Llamamos a la función correctamente importada
+            functions.menu_principal()  
         else:
             print("Acceso denegado.")
+    else: 
+        print("Error. Opción no válida")
