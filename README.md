@@ -29,7 +29,7 @@ El programa comenzará solicitando registrarse (ingresar 1) o iniciar sesión (i
 
 >123 #Contraseña>
 
-Posteriormente se abre un menú con diferentes opciones para gestionar la tienda. Cuyas funcionalidades y uso se describen a continuación:
+Posteriormente se abre un menú con diferentes opciones para gestionar la tienda. Para acceder a una función basta con ingresar su número en la consola según se solicite. Las funciones y su respectivo uso se describen a continuación:
 
 - **1. Agregar producto**
 
