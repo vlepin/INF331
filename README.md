@@ -1,4 +1,4 @@
-# SHOPpy
+# SHOPpy Tienda Virtual
 
 ## Descripción
 
