@@ -23,7 +23,7 @@ Para ejecutar el programa, simplemente abre una terminal o consola y escribe:
 
 > python shop.py >
 
-El programa comenzará solicitando registrarse o identificarse, si no desea registrarse puede ingresar las credenciales disponibles a continuación:
+El programa comenzará solicitando registrarse (ingresar 1) o iniciar sesión (ingresar 2), si no desea registrarse puede ingresar las credenciales disponibles a continuación:
 
 >Admin #Usuario>
 
