@@ -6,7 +6,7 @@ from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.backends import default_backend
 from cryptography.fernet import Fernet
 import sentry_sdk
-import functions  # Importamos correctamente el módulo functions
+import functions 
 
 sentry_sdk.init(
     dsn="https://9ab31e2e0d0c98fe8f441409d641da50@o4509040092446720.ingest.us.sentry.io/4509040094871552",

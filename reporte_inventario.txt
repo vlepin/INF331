@@ -1,6 +1,18 @@
 ===== REPORTE DE INVENTARIO =====
-Total de productos en inventario: 28
-Valor total del inventario: $103100
+Fecha y hora de emisión: 2025-03-31 13:34:31
 
-Productos agotados:
+Productos en inventario:
+Nombre              Cantidad  Valor Total
+--------------------------------------------------
+Pepsi               12        $24000
+Polera rosa         50        $750000
+Pantalon Mom Jeans  4         $72000
+Pepsi               13        $22100
+Naranja             10        $5000
+
+===== RESUMEN =====
+Total de productos en inventario: 89
+Valor total del inventario: $873100
+
+===== PRODUCTOS SIN STOCK =====
 No hay productos agotados.

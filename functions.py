@@ -1,6 +1,7 @@
 import os
 import json
 import logging
+from datetime import datetime
 
 # Configuración de logs
 logging.basicConfig(filename='app.log', level=logging.INFO,
@@ -226,26 +227,39 @@ def buscar_filtrar_productos():
 
 def generar_reporte():
     productos = cargar_productos()
-    
+
     if not productos:
         print("No hay productos en el inventario para generar un reporte.")
         return
-    
+
+    fecha_hora = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     total_productos = sum(producto["cantidad"] for producto in productos)
     valor_total_inventario = sum(producto["cantidad"] * producto["precio"] for producto in productos)
-    productos_agotados = [producto["nombre"] for producto in productos if producto["cantidad"] == 0]
-    
+    productos_agotados = [producto for producto in productos if producto["cantidad"] == 0]
+
     with open("reporte_inventario.txt", "w") as file:
         file.write("===== REPORTE DE INVENTARIO =====\n")
+        file.write(f"Fecha y hora de emisión: {fecha_hora}\n\n")
+        file.write("Productos en inventario:\n")
+        file.write(f"{'Nombre':<20}{'Cantidad':<10}{'Valor Total'}\n")
+        file.write("-" * 50 + "\n")
+
+        for producto in productos:
+            nombre = producto["nombre"]
+            cantidad = producto["cantidad"]
+            valor_total = cantidad * producto["precio"]
+            file.write(f"{nombre:<20}{cantidad:<10}${valor_total}\n")
+
+        file.write("\n===== RESUMEN =====\n")
         file.write(f"Total de productos en inventario: {total_productos}\n")
-        file.write(f"Valor total del inventario: ${valor_total_inventario}\n")
-        file.write("\nProductos agotados:\n")
-        
+        file.write(f"Valor total del inventario: ${valor_total_inventario:}\n")
+
+        file.write("\n===== PRODUCTOS SIN STOCK =====\n")
         if productos_agotados:
             for producto in productos_agotados:
-                file.write(f"- {producto}\n")
+                file.write(f"- {producto['nombre']}\n")
         else:
             file.write("No hay productos agotados.\n")
-    
+
     logging.info("Reporte de inventario generado correctamente.")
     print("📄 Reporte de inventario generado: 'reporte_inventario.txt'.")
