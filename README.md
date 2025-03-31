@@ -1,12 +1,12 @@
 # INF331
 
-Repositorio de Tareas del ramo Pruebas de Software
+Repositorio de Tareas para la asignatura Pruebas de Software
 
 # Integrantes:
 
-- Tamara León
+- Tamara León:     201973015-0
 
-- Valentina Lepin
+- Valentina Lepin: 201904113-4
 
 # Tareas
 
