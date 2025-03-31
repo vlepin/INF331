@@ -9,7 +9,7 @@
     {
         "nombre": "Polera rosa",
         "descripcion": "Polera Americanino - Talla S",
-        "cantidad": 5,
+        "cantidad": 50,
         "precio": 15000,
         "categoria": "Ropa"
     },
@@ -26,5 +26,12 @@
         "cantidad": 13,
         "precio": 1700,
         "categoria": "Bebidas"
+    },
+    {
+        "nombre": "Naranja",
+        "descripcion": "Fruta, venta por unidad",
+        "cantidad": 10,
+        "precio": 500,
+        "categoria": "Fruta"
     }
 ]

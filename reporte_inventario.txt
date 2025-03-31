@@ -1,6 +1,6 @@
 ===== REPORTE DE INVENTARIO =====
-Total de productos en inventario: 34
-Valor total del inventario: $193100
+Total de productos en inventario: 28
+Valor total del inventario: $103100
 
 Productos agotados:
 No hay productos agotados.

@@ -28,6 +28,7 @@ def guardar_productos(productos):
     with open(INVENTARIO_FILE, "w") as file:
         json.dump(productos, file, indent=4)
 
+# Menú principal
 def menu_principal():
     while True:
         print("\nMenú de Gestión de Productos")
@@ -61,18 +62,38 @@ def menu_principal():
 
 
 def agregar_producto():
-    nombre = input("Ingrese el nombre del producto: ")
-    descripcion = input("Ingrese la descripción del producto: ")
-    cantidad = input("Ingrese la stock disponible: ")
-    precio = input("Ingrese el precio unitario: ")
-    categoria = input("Ingrese la categoría del producto: ")
-
-    try:
+    while True:
+        # Solicitar datos no vacíos y válidos
+        nombre = input("Ingrese el nombre del producto: ").strip()
+        if not nombre:
+            print("Error: El nombre del producto no puede estar vacío.")
+            return
+        
+        descripcion = input("Ingrese la descripción del producto: ").strip()
+        if not descripcion:
+            print("Error: La descripción del producto no puede estar vacía.")
+            return
+        
+        cantidad = input("Ingrese el stock disponible: ").strip()
+        
+        if not cantidad.isdigit() or int(cantidad) <= 0:
+            print("Error: La cantidad debe ser un número entero positivo.")
+            return
+        
+        precio = input("Ingrese el precio unitario: ").strip()
+        
+        if not precio.isdigit() or int(precio) <= 0:
+            print("Error: El precio debe ser un número enteros positivo.")
+            return
+        
+        categoria = input("Ingrese la categoría del producto: ").strip()
+        if not categoria:
+            print("Error: La categoría del producto no puede estar vacía.")
+            return
+        
         cantidad = int(cantidad)
         precio = int(precio)
-    except ValueError:
-        print("Error: La cantidad y el precio deben ser un número entero.")
-        return
+        break 
 
     productos = cargar_productos()
     productos.append({
@@ -85,7 +106,7 @@ def agregar_producto():
 
     guardar_productos(productos)
     logging.info("Producto agregado: %s", nombre)
-    print("Producto agregado exitosamente.")
+    print("Producto agregado exitosamente.") 
 
 def ver_productos():
     productos = cargar_productos()
@@ -116,6 +137,10 @@ def actualizar_stock():
 
     print("Ingrese el nuevo stock (deje vacío para no modificar):")
     nueva_cantidad = input(f"Cantidad actual ({productos[index]['cantidad']}): ") or productos[index]['cantidad']
+    
+    if int(nueva_cantidad) < 0:
+        print("Error: La cantidad no puede ser un número negativo.")
+        return
 
     try:
         nueva_cantidad = int(nueva_cantidad)
@@ -174,9 +199,9 @@ def buscar_filtrar_productos():
     # Generar versiones singulares/plurales de la categoría ingresada
     categoria_filtro_alt = categoria_filtro
     if categoria_filtro.endswith("s"):
-        categoria_filtro_alt = categoria_filtro[:-1]  # Elimina la "s" final
+        categoria_filtro_alt = categoria_filtro[:-1]  
     else:
-        categoria_filtro_alt = categoria_filtro + "s"  # Agrega una "s" al final
+        categoria_filtro_alt = categoria_filtro + "s" 
 
     resultados = []
     for producto in productos:
