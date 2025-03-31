@@ -1,4 +1,4 @@
-# SHOPpy Tienda Virtual
+# SHOPpy: Tienda Virtual
 
 ## Descripción
 
@@ -68,3 +68,5 @@ La manera recomendada de realizar contribuciones a este proyecto es a traves del
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Puedes consultar el archivo [LICENSE](https://github.com/vlepin/INF331/blob/Tarea_1/LICENSE) para más detalles.
+
+
