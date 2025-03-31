@@ -55,7 +55,7 @@ Elimina un producto del inventario, se ingresa su índice y se actualiza el inve
 
 - **6. Generar reporte de inventario**
 
-Modifica el archivo `reporte_inventario.txt` ingresando un resumen con el total de productos en inventario, el valor total del inventario y los productos agotados.
+Modifica el archivo `reporte_inventario.txt` genera un reporte con los datos de emisión, una lista con los productos en stock, el valor total del inventario y una lista de los productos sin stock.
 
 - **7. Salir**
 
