@@ -93,18 +93,22 @@ if __name__ == "__main__":
         
     choice = input("Seleccione una opción: ")
 
-    if int(choice) == 1:
-        user = input("Ingrese un nombre de usuario: ")
-        pwd = input("Ingrese una contraseña: ")
-        register_user(user, pwd)
+    try:
+        if int(choice) == 1:
+            user = input("Ingrese un nombre de usuario: ")
+            pwd = input("Ingrese una contraseña: ")
+            register_user(user, pwd)
 
-    elif int(choice) == 2:
-        user = input("Usuario: ")
-        pwd = input("Contraseña: ")
-        
-        if authenticate(user, pwd):
-            functions.menu_principal()  
-        else:
-            print("Acceso denegado.")
-    else: 
+        elif int(choice) == 2:
+            user = input("Usuario: ")
+            pwd = input("Contraseña: ")
+            
+            if authenticate(user, pwd):
+                functions.menu_principal()  
+            else:
+                print("Acceso denegado.")
+        else: 
+            print("Error. Opción no válida")
+
+    except ValueError:
         print("Error. Opción no válida")
