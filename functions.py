@@ -84,12 +84,15 @@ def agregar_producto():
         precio = input("Ingrese el precio unitario: ").strip()
         
         if not precio.isdigit() or int(precio) <= 0:
-            print("Error: El precio debe ser un número enteros positivo.")
+            print("Error: El precio debe ser un número entero positivo.")
             return
         
         categoria = input("Ingrese la categoría del producto: ").strip()
         if not categoria:
             print("Error: La categoría del producto no puede estar vacía.")
+            return
+        elif categoria.isnumeric():
+            print('Categoría no válida')
             return
         
         cantidad = int(cantidad)

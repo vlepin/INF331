@@ -1025,3 +1025,25 @@
 2025-04-01 23:38:03,452 - WARNING - Intento de inicio de sesión fallido para usuario: Admin
 2025-04-01 23:38:40,615 - INFO - Inicio de sesión exitoso para usuario: Tamara
 2025-04-01 23:38:50,487 - INFO - Stock actualizado: Pepsi - Nueva cantidad: 12
+2025-04-02 00:27:36,748 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-02 00:35:03,434 - INFO - Producto agregado: Leche
+2025-04-02 00:41:24,322 - INFO - Producto agregado: Leche
+2025-04-02 00:41:49,924 - INFO - Producto eliminado: Leche
+2025-04-02 00:43:37,749 - INFO - Producto agregado: Leche
+2025-04-02 00:44:38,573 - INFO - Producto eliminado: Leche
+2025-04-02 00:44:52,702 - INFO - Producto eliminado: Leche
+2025-04-02 00:55:37,364 - INFO - Producto agregado: Leche
+2025-04-02 00:58:01,309 - INFO - Producto agregado: Leche
+2025-04-02 01:00:57,547 - INFO - Producto agregado: Leche
+2025-04-02 01:01:07,483 - INFO - Producto eliminado: Leche
+2025-04-02 01:02:25,652 - INFO - Producto eliminado: Leche
+2025-04-02 01:05:59,480 - INFO - Producto agregado: Leche
+2025-04-02 01:06:30,545 - INFO - Producto eliminado: Leche
+2025-04-02 01:06:53,173 - INFO - Producto agregado: Leche
+2025-04-02 01:10:21,073 - INFO - Producto agregado: Leche
+2025-04-02 01:10:39,205 - INFO - Producto eliminado: Leche
+2025-04-02 01:10:55,597 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-02 01:14:34,561 - INFO - Producto eliminado: Leche
+2025-04-02 01:19:32,249 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-02 01:19:38,541 - INFO - Producto eliminado: Leche
+2025-04-02 01:20:27,911 - INFO - Producto agregado: Leche
