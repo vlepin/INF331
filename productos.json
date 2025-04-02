@@ -23,7 +23,7 @@
     {
         "nombre": "Pepsi",
         "descripcion": "Bebida gasificada - 2L",
-        "cantidad": 13,
+        "cantidad": 12,
         "precio": 1700,
         "categoria": "Bebidas"
     },

@@ -1013,3 +1013,15 @@
 2025-03-27 17:00:37,031 - INFO - Inicio de sesiÃ³n exitoso para usuario: Valepin
 2025-03-27 17:01:49,391 - INFO - Producto agregado: PantalÃ³n Mom Jeans
 2025-03-27 17:01:57,428 - INFO - Reporte de inventario generado correctamente.
+2025-04-01 15:49:58,294 - INFO - Inicio de sesión exitoso para usuario: Admin
+2025-04-01 22:48:32,167 - INFO - Usuario Tamara registrado con éxito.
+2025-04-01 22:49:28,940 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:02:05,815 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:04:39,538 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:17:32,652 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:21:14,737 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:23:35,704 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:32:37,326 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:38:03,452 - WARNING - Intento de inicio de sesión fallido para usuario: Admin
+2025-04-01 23:38:40,615 - INFO - Inicio de sesión exitoso para usuario: Tamara
+2025-04-01 23:38:50,487 - INFO - Stock actualizado: Pepsi - Nueva cantidad: 12

@@ -138,16 +138,19 @@ def actualizar_stock():
 
     print("Ingrese el nuevo stock (deje vacío para no modificar):")
     nueva_cantidad = input(f"Cantidad actual ({productos[index]['cantidad']}): ") or productos[index]['cantidad']
-    
-    if int(nueva_cantidad) < 0:
-        print("Error: La cantidad no puede ser un número negativo.")
-        return
 
     try:
         nueva_cantidad = int(nueva_cantidad)
     except ValueError:
         print("Error: La cantidad debe ser un número entero.")
         return
+
+
+    if int(nueva_cantidad) < 0:
+        print("Error: La cantidad no puede ser un número negativo.")
+        return
+
+
 
     productos[index]["cantidad"] = nueva_cantidad
 
