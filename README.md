@@ -2,7 +2,7 @@
 
 ## Descripción
 
-El programa ´shop.py´ permite gestionar una tienda virtual de manera sencilla. Con esta herramienta, puedes agregar productos al inventario, procesar compras y generar reportes de ventas. Es ideal para pequeños negocios o para gestionar listas de compras personales.
+´shop.py´ es un programa en Python que permite gestionar una tienda virtual de manera sencilla. Con esta herramienta, puedes agregar productos al inventario, procesar compras y generar reportes de ventas. Es ideal para pequeños negocios o para gestionar listas de compras personales.
 
 ## Instalación
 
@@ -19,54 +19,52 @@ Si deseas instalarlos manualmente, puedes ejecutar:
 
 ## Cómo usar
 
-Para ejecutar el programa, simplemente abre una terminal o consola y escribe:
+Para ejecutar el programa, abre una terminal o consola y escribe:
 
 > python shop.py >
 
-El programa comenzará solicitando registrarse (ingresar 1) o iniciar sesión (ingresar 2), si no desea registrarse puede ingresar las credenciales disponibles a continuación:
+Al iniciar, el programa solicita registrarse (´1´) o iniciar sesión (´2´). Si no deseas registrarte, puedes usar las siguientes credenciales predeterminadas::
 
->Admin #Usuario>
+- Usuario: ´Admin´
 
->123 #Contraseña>
+- Contraseña: ´123´
 
 Posteriormente se abre un menú con diferentes opciones para gestionar la tienda. Para acceder a una función basta con ingresar su número en la consola según se solicite. Las funciones y su respectivo uso se describen a continuación:
 
 - **1. Agregar producto**
 
-Agrega un producto al inventario, para ello se deben rellenar los campos: `Nombre`, `Descripción`, `Unidades disponibles`, `Precio unitario` y `Categoría`.
+Permite agregar productos al inventario ingresando los siguientes datos: `Nombre`, `Descripción`, `Unidades disponibles`, `Precio unitario` y `Categoría`.
 
 - **2. Consultar lista de productos**
 
-Entrega la lista de los productos ingresados (incluso si no tienen stock), y se muestran en el orden en que fueron ingresados con su respectivo índice.
+Muestra la lista de productos ingresados, incluyendo aquellos sin stock, en el orden en que fueron agregados junto con su índice.
 
 - **3. Buscar y filtrar productos**
 
-Si se desea omitir alguna de las opciones oprimir `Enter`.
-
-Primero pide el nombre del producto para buscar. Y después comienza la opción de filtrado de productos por `Categoría` y un rango de precios.
+Se puede buscar un producto por nombre y aplicar filtros por `Categoría` y `Rango de precios`. Si se desea omitir algún filtro, basta con presionar `Enter`.
 
 - **4. Gestionar stock**
 
-Se selecciona el número de índice del producto cuyo stock se desea modificar, después se ingresa la cantidad actualizada del producto y se actualiza en el inventario.
+Permite actualizar la cantidad de unidades disponibles de un producto ingresando su índice y el nuevo valor.
 
 - **5. Eliminar producto**
 
-Elimina un producto del inventario, se ingresa su índice y se actualiza el inventario.
+Permite eliminar un producto del inventario ingresando su índice.
 
 - **6. Generar reporte de inventario**
 
-Modifica el archivo `reporte_inventario.txt` genera un reporte con los datos de emisión, una lista con los productos en stock, el valor total del inventario y una lista de los productos sin stock.
+Genera un informe en el archivo `reporte_inventario.txt` con la fecha de emisión, la lista de productos en stock, el valor total del inventario y los productos sin stock.
 
 - **7. Salir**
 
-Cierra la sesión.
+Finaliza la ejecución del programa y cierra la sesión.
 
 ## Cómo contribuir
 
-La manera recomendada de realizar contribuciones a este proyecto es a traves del flujo de trabajo ["fork and pull request"](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
+Para contribuir a este proyecto, se recomienda seguir el flujo de trabajo ["fork and pull request"](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project).
 
 ## Licencia
 
-Este proyecto está bajo la licencia MIT. Puedes consultar el archivo [LICENSE](https://github.com/vlepin/INF331/blob/Tarea_1/LICENSE) para más detalles.
+Este proyecto está bajo la licencia MIT. Puedes consultar más detalles en el archivo [LICENSE](https://github.com/vlepin/INF331/blob/Tarea_1/LICENSE) .
 
 
