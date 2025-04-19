@@ -22,60 +22,60 @@ Esta sección detalla los  10 casos de uso más importantes del sistema.
 | UC09 | Notificaciones                 | El usuario consumidor debe poder recibir notificaciones en tiempo real sobre reservas, mensajes y cambios en la agenda.            |
 | UC10 | Panel de gestión de servicios  | El usuario prestador de servicios debe poder gestionar sus reservas, disponibilidad y reseñas desde un panel personal.          |
 
+## Requerimientos Funcionales
 
-## Requerimientos funcionales
+| ID   | Requerimiento Funcional                                                                 |
+|:-----:|:-----------------------------------------------------------------------------------------|
+| RF1  | El sistema debe permitir el registro de usuarios consumidores y profesionales.          |
+| RF2  | El sistema debe permitir a los profesionales publicar y editar servicios.               |
+| RF3  | El sistema debe permitir a los usuarios clientes buscar servicios por múltiples filtros.|
+| RF4  | El sistema debe permitir agendar servicios según disponibilidad.                        |
+| RF5  | El sistema debe permitir enviar y recibir mensajes entre usuarios clientes y profesionales.|
+| RF6  | El sistema debe permitir valorar y reseñar servicios.                                   |
+| RF7  | El sistema debe mostrar notificaciones importantes como confirmación de visita, mensajes, entre otros.|
+| RF8  | El sistema debe contar con un panel de administración.                                  |
+| RF9  | El sistema debe mostrar la agenda y reservas a los profesionales.                       |
+| RF10 | El sistema debe ofrecer un panel personal a cada tipo de usuario.                       |
 
-- El sistema debe permitir el registro de usuarios consumidores y profesionales.
+## Requerimientos No Funcionales
 
-- El sistema debe permitir a los profesionales publicar y editar servicios.
+| ID   | Tipo           | Requerimiento                                                                 |
+|:-----:|:---------------|:------------------------------------------------------------------------------|
+| RNF1 | Usabilidad      | Interfaz intuitiva y adaptada a móviles (diseño *responsive*).               |
+| RNF2 | Rendimiento     | Las búsquedas deben ejecutarse en menos de 3 segundos.                       |
+| RNF3 | Seguridad       | Cifrado de contraseñas y validación de identidad.                            |
+| RNF4 | Escalabilidad   | Soportar crecimiento de usuarios sin afectar rendimiento.                    |
+| RNF5 | Disponibilidad  | El sistema debe estar disponible 99% del tiempo mensual.                     |
+| RNF6 | Mantenibilidad  | El código debe ser modular y documentado.                                    |
+| RNF7 | Accesibilidad   | El sistema debe cumplir con estándares de accesibilidad WCAG 2.1 nivel AA.   |
 
-- El sistema debe permitir a los usuarios buscar servicios por múltiples filtros.
+## Priorización de Requerimientos
 
-- El sistema debe permitir agendar servicios según disponibilidad.
+Usando el enfoque **MoSCoW**, se detallan los requerimientos a continuación:
 
-- El sistema debe permitir enviar y recibir mensajes entre usuarios consumidores y profesionales.
+| ID   | Requerimiento                                                  | Prioridad     |
+|:----:|:----------------------------------------------------------------|:--------------|
+| RF1  | Registro de usuarios consumidores y profesionales              | Must have     |
+| RF2  | Publicación y edición de servicios por profesionales           | Must have     |
+| RF3  | Búsqueda de servicios por múltiples filtros                    | Must have     |
+| RF4  | Agendamiento de servicios según disponibilidad                 | Must have     |
+| RF5  | Envío y recepción de mensajes entre clientes y profesionales   | Should have   |
+| RF6  | Valoración y reseña de servicios                               | Must have     |
+| RF7  | Notificaciones importantes (confirmaciones, mensajes, etc.)    | Should have   |
+| RF8  | Panel de administración                                        | Should have   |
+| RF9  | Visualización de agenda y reservas para profesionales          | Should have   |
+| RF10 | Panel personal para cada tipo de usuario                       | Must have     |
+| RNF1 | Interfaz intuitiva y adaptada a móviles (*responsive*)         | Must have     |
+| RNF2 | Búsquedas ejecutadas en menos de 3 segundos                    | Must have     |
+| RNF3 | Cifrado de contraseñas y validación de identidad               | Must have     |
+| RNF4 | Escalabilidad sin afectar rendimiento                          | Should have   |
+| RNF5 | Disponibilidad del sistema 99% del tiempo mensual              | Should have   |
+| RNF6 | Código modular y documentado                                   | Could have    |
+| RNF7 | Cumplimiento de estándares de accesibilidad WCAG 2.1 nivel AA | Could have    |
 
-- El sistema debe permitir valorar y reseñar servicios.
-
-- El sistema debe mostrar notificaciones importantes como confirmación de visita, mensajes, entre otros.
-
-- El sistema debe contar con un panel de administración.
-
-- El sistema debe mostrar la agenda y reservas a los profesionales.
-
-- El sistema debe ofrecer un panel personal a cada tipo de usuario.
-
-## Requerimientos no funcionales
-Incluir aspectos como rendimiento, usabilidad, seguridad, escalabilidad, disponibilidad, etc.
-
-
-|Tipo	|Requerimiento|
-|:------:|:-------------------------------|
-|Usabilidad|	Interfaz intuitiva y adaptada a móviles (diseño *responsive*).|
-|Rendimiento	|Las búsquedas deben ejecutarse en menos de 3 segundos.|
-|Seguridad	|Cifrado de contraseñas y validación de identidad.|
-|Escalabilidad	|Soportar crecimiento de usuarios sin afectar rendimiento.|
-|Disponibilidad	|El sistema debe estar disponible 99% del tiempo mensual.|
-|Mantenibilidad	|El código debe ser modular y documentado.|
-
-## Priorización de requerimientos
-
-Usando el enfoque MoSCoW se detallan los requerimientos:
-
-|Requerimiento|	Prioridad|
-|:------|:-------------------------------|
-|Registro de usuarios consumidores y profesionales|	Must have|
-|Publicación de servicios|	Must have|
-|Búsqueda con filtros|	Must have|
-|Agendamiento|	Must have|
-|Chat interno|	Should have|
-|Valoraciones|	Must have|
-|Notificaciones|	Should have|
-|Panel de administración	|Should have|
-|Diseño responsive|	Must have|
 
 ## Reglas de negocio
-Las siguientes reglas definen restricciones y comportamientos específicos del sistema Conectados, alineados con su dominio de operación. Estas reglas garantizan un funcionamiento justo, seguro y transparente para usuarios y prestadores de servicios.
+Las siguientes reglas definen restricciones y comportamientos específicos del sistema Conectados, alineados con su dominio de operación. Estas reglas garantizan un funcionamiento justo, seguro y transparente para usuarios tanto clientes como prestadores de servicios.
 
 ### Solo profesionales verificados pueden ser mostrados en los resultados de búsqueda.
 
@@ -117,37 +117,51 @@ Esta sección detalla los supuestos realizados para completar esta especificaci�
 
 - Se asume que los profesionales son responsables de cumplir los horarios ofrecidos.
 
-## Incluir una primera aproximación al plan de pruebas del sistema, que contemple:
+## Plan de pruebas del sistema
 
-¿Qué se va a probar?¿Qué no se va a probar?
-
-Una clasificación inicial de los tipos de pruebas a realizar (pruebas funcionales, no funcionales, pruebas de integración, pruebas de aceptación, ¿se probará el backend, se probará el frontend?
-
-Casos de prueba (listado): Listar casos de prueba básicos (solo enunciado) y vincularlos explícitamente con los requerimientos que validan.
+A continuación, se presenta una primera aproximación al plan de pruebas del sistema, que contempla los elementos clave a validar, las exclusiones, la clasificación de pruebas y un listado básico de casos de prueba vinculados a requerimientos funcionales.
 
 ### Se va a probar:
 
-Registro, login, publicación, búsqueda, agendamiento, valoraciones.
+Funcionalidades principales del sistema:
+
+- Registro de usuarios.
+
+- Inicio de sesión.
+
+- Publicación de servicios por parte de profesionales.
+
+- Búsqueda de servicios por categoría o nombre.
+
+- Agendamiento de citas con validación de horarios disponibles.
+
+- Valoración de servicios finalizados.
 
 ### No se va a probar:
 
-Integración con pasarelas de pago externas (no está contemplado en esta versión).
+- Integración con pasarelas de pago externas (no se contempla).
+
+- Procesos automáticos de verificación de identidad profesional (se asume como externo).
+
+- Notificaciones por canales externos como correo electrónico o SMS (de momento).
 
 ### Tipos de pruebas:
 
-- Funcionales (alta prioridad).
+- Pruebas funcionales: Verifican que las funciones del sistema cumplan con los requerimientos definidos. Alta prioridad.
 
-- No funcionales (rendimiento, usabilidad).
+- Pruebas no funcionales: Evalúan aspectos como rendimiento del sistema y usabilidad de la interfaz.
 
-- Pruebas de integración (backend-frontend).
+- Pruebas de integración: Validan la correcta comunicación entre frontend y backend.
 
-- Pruebas de aceptación (validación por parte del cliente).
+- Pruebas de aceptación: Validación final del sistema por parte del cliente o usuario final.
 
-|CP | Caso de Prueba | Requerimiento vinculado|
-|:------|:-------------------------------|:------:|
-|CP1 | Verificar que un usuario pueda registrarse exitosamente | RF1|
-|CP2 | Verificar que un profesional pueda publicar un servicio | RF2|
-|CP3 | Verificar que la búsqueda por categoría muestre resultados correctos | RF3|
-|CP4 | Verificar que se pueda agendar un servicio sin conflictos de horario | RF4|
-|CP5 | Verificar que se pueda valorar un servicio completado | RF6|
-
+| CP  | Caso de Prueba                                                           | Requerimiento vinculado |
+|:---:|:-------------------------------------------------------------------------|:------------------------:|
+| CP1 | Verificar que un usuario pueda registrarse exitosamente                 | RF1                     |
+| CP2 | Verificar que un usuario pueda iniciar sesión correctamente             | RF1                     |
+| CP3 | Verificar que un profesional pueda publicar y editar un servicio        | RF2                     |
+| CP4 | Verificar que la búsqueda por categoría o nombre arroje resultados      | RF3                     |
+| CP5 | Verificar que se pueda agendar un servicio sin conflictos de horario    | RF4                     |
+| CP6 | Verificar que un usuario pueda valorar un servicio completado           | RF6                     |
+| CP7 | Verificar que los mensajes puedan enviarse y recibirse correctamente    | RF5                     |
+| CP8 | Verificar que las notificaciones se muestren en el sistema              | RF7                     |
