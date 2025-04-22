@@ -103,9 +103,9 @@ Cuando un usuario presenta una denuncia sobre un profesional, el sistema ocultar
 
 1. Diagrama de casos de uso
 
-Muestra qué puede hacer un usuario dentro del sistema, representando las interacciones entre los actores (usuarios) y las funcionalidades principales del sistema (casos de uso).
+Muestra qué puede hacer un usuario dentro del sistema, representando las interacciones entre los actores (usuarios) y las funcionalidades principales del sistema (casos de uso). En este diagrama se agregan algunos casos de uso no nombrados anteriormente.
 
-![Diagrama de caso de uso (1)](https://github.com/user-attachments/assets/3d2fbfb7-db54-448d-bd7c-9dbe4743690c)
+![Diagrama de caso de uso](https://github.com/user-attachments/assets/0f0693d0-77cc-4870-874f-d8b58098fdcb)
 
 
 2. Diagrama ER de base de datos
