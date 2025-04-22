@@ -147,6 +147,9 @@ Funcionalidades principales del sistema:
 - Agendamiento de citas con validación de horarios disponibles.
 
 - Valoración de servicios finalizados.
+  
+- Envío y recepción de mensajes.
+- Recepción de notificaciones.
 
 ### No se va a probar:
 
@@ -166,13 +169,17 @@ Funcionalidades principales del sistema:
 
 - Pruebas de aceptación: Validación final del sistema por parte del cliente o usuario final.
 
-| ID  | Caso de Prueba                                                           | Requerimiento vinculado |
-|:---:|:-------------------------------------------------------------------------|:------------------------:|
-| CP1 | Verificar que un usuario pueda registrarse exitosamente                 | RF1                     |
-| CP2 | Verificar que un usuario pueda iniciar sesión correctamente             | RF2                     |
-| CP3 | Verificar que un profesional pueda publicar y editar un servicio        | RF3                     |
-| CP4 | Verificar que la búsqueda por categoría o nombre arroje resultados      | RF4                     |
-| CP5 | Verificar que se pueda agendar un servicio sin conflictos de horario    | RF5                     |
-| CP6 | Verificar que un usuario pueda valorar un servicio completado           | RF7                     |
-| CP7 | Verificar que los mensajes puedan enviarse y recibirse correctamente    | RF6                     |
-| CP8 | Verificar que las notificaciones se muestren en el sistema              | RF8                     |
+
+ID | Caso de Prueba | Requerimiento Vinculado | Entrada | Resultado Esperado
+|:---:|:-------------------------|:------------------------:|:-------------------------|:------------------------|
+CP1 | Verificar que un usuario pueda registrarse exitosamente | RF1 | Datos válidos de registro (nombre, email, contraseña, tipo de usuario) | Usuario registrado y redirigido al panel correspondiente
+CP2 | Verificar que un usuario pueda iniciar sesión correctamente | RF2 | Email y contraseña válidos | Acceso exitoso al sistema y redirección al panel de usuario
+CP3 | Verificar que un profesional pueda publicar y editar un servicio | RF3 | Formulario de publicación con título, descripción, precio, foto, categoría | Servicio visible en el perfil del profesional y en los resultados de búsqueda
+CP4 | Verificar que la búsqueda por categoría o nombre arroje resultados | RF4 | Filtro de categoría o campo de búsqueda con palabra clave | Lista de servicios relevantes mostrada al usuario
+CP5 | Verificar que se pueda agendar una cita si hay disponibilidad | RF5 | Fecha y hora disponibles seleccionadas en el calendario | Cita agendada y espacio bloqueado en la agenda del profesional
+CP6 | Verificar que un cliente pueda enviar un mensaje a un profesional | RF6 | Texto del mensaje ingresado y destinatario seleccionado | Mensaje enviado y recibido correctamente
+CP7 | Verificar que un cliente pueda valorar un servicio finalizado | RF7 | Calificación (1-5 estrellas) y texto de reseña ingresado tras servicio realizado | Reseña almacenada y visible en el perfil del profesional
+CP8 | Verificar que se muestren notificaciones relevantes | RF8 | Simulación de evento (mensaje nuevo, confirmación de cita) | Notificación mostrada en tiempo real
+CP9 | Verificar acceso al panel de administración | RF9 | Usuario con rol administrativo inicia sesión | Acceso al panel de gestión general del sistema
+CP10 | Verificar que los profesionales vean su agenda con reservas | RF10 | Profesional inicia sesión y accede a su calendario | Se visualizan correctamente las citas agendadas
+CP11 | Verificar que cada usuario acceda a su panel personalizado | RF11 | Usuario inicia sesión (cliente o profesional) | Panel mostrado de acuerdo con el rol del usuario
