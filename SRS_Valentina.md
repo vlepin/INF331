@@ -1,41 +1,42 @@
 # Tarea 2: SRS, Especificación de Requerimientos de Software
 
-## Conectados: Servicios a un clic
+## [Conectados: Servicios a un clic](https://github.com/Pruebas-de-Software/HandsOnProject/blob/main/semestres/2025-1/conectados.md)
 
 ## Requerimiento de negocio
 
 Conectados es una plataforma web que tiene como objetivo facilitar la conexión entre personas que requieren servicios a domicilio (peluquería, electricidad, gasfitería, etc.) y profesionales que los ofrecen. Se busca mejorar la experiencia de búsqueda, contratación y evaluación de servicios, reduciendo la informalidad, aumentando la confianza y democratizando el acceso al mercado.
 
 ## Casos de Uso (UC)
-Esta sección detalla los  10 casos de uso más importantes del sistema.
+Esta sección detalla los 10 casos de uso más importantes del sistema.
 
 | ID   | Nombre del Caso de Uso         | Descripción                                                                                                              |
 |------|:-------------------------------|:-------------------------------------------------------------------------------------------------------------------------|
-| UC01 | Registro de usuario            | El usuario debe poder registrarse en la plataforma para acceder a los servicios en menos de 2 minutos.                   |
-| UC02 | Registro de profesional        | El usuario prestador de servicios debe poder crear un perfil para ofrecer sus servicios con información verificada.             |
+| UC01 | Registro de usuario            | El usuario nuevo debe poder registrarse en la plataforma para acceder a los servicios en menos de 2 minutos.                   |
+| UC02 | Inicio de sesión               | El usuario registrado debe poder ingresar sesión en la plataforma en menos de 2 minutos              |
 | UC03 | Publicación de servicios       | El usuario prestador de servicios debe poder publicar los servicios en su perfil incluyendo fotos, precios y descripciones.     |
-| UC04 | Búsqueda de servicios          | El usuario consumidor debe poder buscar servicios usando filtros como categoría, ubicación y disponibilidad.                       |
-| UC05 | Visualización de perfil        | El usuario consumidor debe poder visualizar el perfil del usuario prestador de servicios incluyendo reseñas y su portafolio de trabajos.   |
-| UC06 | Agenda de citas                | El usuario consumidor debe poder agendar una cita según la disponibilidad del prestador mediante un calendario interactivo.        |
-| UC07 | Chat interno                   | El usuario consumidor debe poder enviar mensajes directos al prestador de servicios para coordinar antes de agendar.               |
-| UC08 | Valoración del servicio        | El usuario consumidor debe poder dejar una reseña y calificación tras recibir un servicio, reflejando su calidad.                  |
-| UC09 | Notificaciones                 | El usuario consumidor debe poder recibir notificaciones en tiempo real sobre reservas, mensajes y cambios en la agenda.            |
+| UC04 | Búsqueda de servicios          | El usuario cliente debe poder buscar servicios usando filtros como categoría, ubicación y disponibilidad.                       |
+| UC05 | Visualización de perfil        | El usuario cliente debe poder visualizar el perfil del usuario prestador de servicios incluyendo reseñas y su portafolio de trabajos.   |
+| UC06 | Agenda de citas                | El usuario cliente debe poder agendar una cita según la disponibilidad del prestador mediante un calendario interactivo.        |
+| UC07 | Chat interno                   | El usuario cliente debe poder enviar mensajes directos al prestador de servicios para coordinar antes de agendar.               |
+| UC08 | Valoración del servicio        | El usuario cliente debe poder dejar una reseña y calificación tras recibir un servicio, reflejando su calidad.                  |
+| UC09 | Notificaciones                 | El usuario cliente debe poder recibir notificaciones en tiempo real sobre reservas, mensajes y cambios en la agenda.            |
 | UC10 | Panel de gestión de servicios  | El usuario prestador de servicios debe poder gestionar sus reservas, disponibilidad y reseñas desde un panel personal.          |
 
 ## Requerimientos Funcionales
 
 | ID   | Requerimiento Funcional                                                                 |
 |:-----:|:-----------------------------------------------------------------------------------------|
-| RF1  | El sistema debe permitir el registro de usuarios consumidores y profesionales.          |
-| RF2  | El sistema debe permitir a los profesionales publicar y editar servicios.               |
-| RF3  | El sistema debe permitir a los usuarios clientes buscar servicios por múltiples filtros.|
-| RF4  | El sistema debe permitir agendar servicios según disponibilidad.                        |
-| RF5  | El sistema debe permitir enviar y recibir mensajes entre usuarios clientes y profesionales.|
-| RF6  | El sistema debe permitir valorar y reseñar servicios.                                   |
-| RF7  | El sistema debe mostrar notificaciones importantes como confirmación de visita, mensajes, entre otros.|
-| RF8  | El sistema debe contar con un panel de administración.                                  |
-| RF9  | El sistema debe mostrar la agenda y reservas a los profesionales.                       |
-| RF10 | El sistema debe ofrecer un panel personal a cada tipo de usuario.                       |
+| RF1  | El sistema debe permitir el registro de usuarios clientees y profesionales.          |
+| RF2  | El sistema debe permitir el inicio de sesión de usuarios registrados.               |
+| RF3  | El sistema debe permitir a los profesionales publicar y editar servicios.|
+| RF4  | El sistema debe permitir a los usuarios clientes buscar servicios por múltiples filtros.                        |
+| RF5  | El sistema debe permitir agendar servicios según disponibilidad.|
+| RF6  | El sistema debe permitir enviar y recibir mensajes entre usuarios clientes y profesionales.                                   |
+| RF7  | El sistema debe permitir valorar y reseñar servicios.|
+| RF8  | El sistema debe mostrar notificaciones importantes como confirmación de visita, mensajes, entre otros.                                |
+| RF9  | El sistema debe contar con un panel de administración.                      |
+| RF10 | El sistema debe mostrar la agenda y reservas a los profesionales.                     |
+| RF11 | El sistema debe ofrecer un panel personal a cada tipo de usuario.                       |
 
 ## Requerimientos No Funcionales
 
@@ -55,16 +56,17 @@ Usando el enfoque **MoSCoW**, se detallan los requerimientos a continuación:
 
 | ID   | Requerimiento                                                  | Prioridad     |
 |:----:|:----------------------------------------------------------------|:--------------|
-| RF1  | Registro de usuarios consumidores y profesionales              | Must have     |
-| RF2  | Publicación y edición de servicios por profesionales           | Must have     |
-| RF3  | Búsqueda de servicios por múltiples filtros                    | Must have     |
-| RF4  | Agendamiento de servicios según disponibilidad                 | Must have     |
-| RF5  | Envío y recepción de mensajes entre clientes y profesionales   | Should have   |
-| RF6  | Valoración y reseña de servicios                               | Must have     |
-| RF7  | Notificaciones importantes (confirmaciones, mensajes, etc.)    | Should have   |
-| RF8  | Panel de administración                                        | Should have   |
-| RF9  | Visualización de agenda y reservas para profesionales          | Should have   |
-| RF10 | Panel personal para cada tipo de usuario                       | Must have     |
+| RF1  | Registro de usuarios clientees y profesionales              | Must have     |
+| RF2  |  Inicio de sesión de usuarios registrados          | Must have     |
+| RF3  |	Publicación y edición de servicios por profesionales	|Must have|  
+| RF4  | Búsqueda de servicios por múltiples filtros                    | Must have     |
+| RF5  | Agendamiento de servicios según disponibilidad                 | Must have     |
+| RF6  | Envío y recepción de mensajes entre clientes y profesionales   | Should have   |
+| RF7  | Valoración y reseña de servicios                               | Must have     |
+| RF8  | Notificaciones importantes (confirmaciones, mensajes, etc.)    | Should have   |
+| RF9  | Panel de administración                                        | Should have   |
+| RF10  | Visualización de agenda y reservas para profesionales          | Should have   |
+| RF11 | Panel personal para cada tipo de usuario                       | Must have     |
 | RNF1 | Interfaz intuitiva y adaptada a móviles (*responsive*)         | Must have     |
 | RNF2 | Búsquedas ejecutadas en menos de 3 segundos                    | Must have     |
 | RNF3 | Cifrado de contraseñas y validación de identidad               | Must have     |
@@ -98,11 +100,20 @@ Una vez que un usuario agenda un servicio con un profesional en un horario deter
 Cuando un usuario presenta una denuncia sobre un profesional, el sistema ocultará temporalmente el perfil denunciado de los resultados de búsqueda. El equipo de administración deberá revisar la denuncia y tomar una decisión antes de reactivar o suspender permanentemente al prestador.
 
 ## Diagramas de la solución
-Incluir al menos dos diagramas que ayuden a comprender mejor el sistema (por ejemplo: de conUC, casos de uso, flujo de datos, arquitectura, etc.)
 
-Basarse en el enfoque propuesto en el Capítulo 12 de Wiegers.
+1. Diagrama de casos de uso
 
-Solo se evaluará diagramas que aporten valor a la solución.
+Muestra qué puede hacer un usuario dentro del sistema, representando las interacciones entre los actores (usuarios) y las funcionalidades principales del sistema (casos de uso).
+
+![Diagrama de caso de uso (1)](https://github.com/user-attachments/assets/3d2fbfb7-db54-448d-bd7c-9dbe4743690c)
+
+
+2. Diagrama ER de base de datos
+
+Muestra cómo se organizan y relacionan los datos del sistema. Representa entidades, sus atributos y las relaciones entre ellas, incluyendo cardinalidades.
+
+![Diagrama ER de base de datos (pata de gallo)](https://github.com/user-attachments/assets/c04c9a69-b589-4ab6-904b-88885bab77cd)
+
 
 
 ## Supuestos
@@ -119,7 +130,7 @@ Esta sección detalla los supuestos realizados para completar esta especificaci�
 
 ## Plan de pruebas del sistema
 
-A continuación, se presenta una primera aproximación al plan de pruebas del sistema, que contempla los elementos clave a validar, las exclusiones, la clasificación de pruebas y un listado básico de casos de prueba vinculados a requerimientos funcionales.
+A continuación, se presenta una primera aproximación al plan de pruebas del sistema, que contempla los elementos clave a validar, las exclusiones, la clasificación de pruebas y un listado básico de casos de prueba vinculados a requerimientos funcionales. 
 
 ### Se va a probar:
 
@@ -155,13 +166,13 @@ Funcionalidades principales del sistema:
 
 - Pruebas de aceptación: Validación final del sistema por parte del cliente o usuario final.
 
-| CP  | Caso de Prueba                                                           | Requerimiento vinculado |
+| ID  | Caso de Prueba                                                           | Requerimiento vinculado |
 |:---:|:-------------------------------------------------------------------------|:------------------------:|
 | CP1 | Verificar que un usuario pueda registrarse exitosamente                 | RF1                     |
-| CP2 | Verificar que un usuario pueda iniciar sesión correctamente             | RF1                     |
-| CP3 | Verificar que un profesional pueda publicar y editar un servicio        | RF2                     |
-| CP4 | Verificar que la búsqueda por categoría o nombre arroje resultados      | RF3                     |
-| CP5 | Verificar que se pueda agendar un servicio sin conflictos de horario    | RF4                     |
-| CP6 | Verificar que un usuario pueda valorar un servicio completado           | RF6                     |
-| CP7 | Verificar que los mensajes puedan enviarse y recibirse correctamente    | RF5                     |
-| CP8 | Verificar que las notificaciones se muestren en el sistema              | RF7                     |
+| CP2 | Verificar que un usuario pueda iniciar sesión correctamente             | RF2                     |
+| CP3 | Verificar que un profesional pueda publicar y editar un servicio        | RF3                     |
+| CP4 | Verificar que la búsqueda por categoría o nombre arroje resultados      | RF4                     |
+| CP5 | Verificar que se pueda agendar un servicio sin conflictos de horario    | RF5                     |
+| CP6 | Verificar que un usuario pueda valorar un servicio completado           | RF7                     |
+| CP7 | Verificar que los mensajes puedan enviarse y recibirse correctamente    | RF6                     |
+| CP8 | Verificar que las notificaciones se muestren en el sistema              | RF8                     |
